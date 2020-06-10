@@ -1,0 +1,51 @@
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 2fr));
+  grid-auto-rows: minmax(150px, auto);
+}
+header,
+footer {
+  //padding: 3em;
+  flex: 0 1 100%;
+  grid-column: 1 / -1;
+  text-align: center;
+  //background-color: rgba(175, 186, 202, 1);
+}
+
+ion-card{
+  border-radius: 5px;
+  //padding: 3em;
+  margin-left: 3px;
+  margin-right: 3px;
+  flex: 1 1 300px;
+
+  height: 260px;
+  text-overflow: ellipsis;
+  //line-height: 30px;
+  //-webkit-line-clamp: 1;
+}
+
+.article_img{
+  object-fit: cover;
+  max-height: 160px;
+  height: 160px;
+}
+
+//if browser doesn't support grid just add margin
+.wrapper > * {
+  margin-bottom: 10px;
+}
+
+//if browser adds grid don't add margin
+@supports (display: grid) {
+  .wrapper > * {
+    margin: 0;
+  }
+}

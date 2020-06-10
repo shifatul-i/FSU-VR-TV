@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recommended</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div class="wrapper">
+        <!--<header>-->
+        <!--<ion-img class ="header_img" src ="https://fresnoconventioncenter.com/wp-content/uploads/2015/04/FresnoState2.png"></ion-img>-->
+        <!--</header>-->
+
+
+        <ion-item *ngFor="let article of data?.articles">
+            <ion-card>
+                <ion-img class = "article_img"src= {{article.urlToImage}} ></ion-img>
+
+                <ion-card-content>
+                    <ion-card-title>{{article.author || 'Adrian Hernandez'}}</ion-card-title>
+
+                    <p>{{article.source.id || 'Fresno State'}}</p>
+                </ion-card-content>
+            </ion-card>
+        </ion-item>
+
+
+        <!--<footer>FOOTER HERE</footer>-->
+    </div>
+
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "vcp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
